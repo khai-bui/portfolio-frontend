@@ -1,8 +1,16 @@
+import axios from "axios";
 const BASE_URL = import.meta.env.VITE_API_URL;
+const API_BASE_URL = "https://fancy-donut-1f875d.netlify.app/";
 
 export const getToken = () => localStorage.getItem("token");
 export const setToken = (token) => localStorage.setItem("token", token);
 export const clearToken = () => localStorage.removeItem("token");
+export const api = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
 async function request(path, { method = "GET", body } = {}) {
   const headers = {};
