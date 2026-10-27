@@ -1,6 +1,6 @@
 import axios from "axios";
 const BASE_URL = import.meta.env.VITE_API_URL;
-const API_BASE_URL = "https://fancy-donut-1f875d.netlify.app/";
+const API_BASE_URL = "https://portfolio-backend-qznm.onrender.com";
 
 export const getToken = () => localStorage.getItem("token");
 export const setToken = (token) => localStorage.setItem("token", token);
