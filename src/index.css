@@ -101,28 +101,15 @@ h1, h2, h3 { color: var(--text); margin-top: 0; }
 .socials a:hover { color: var(--accent); }
 
 /* Avatar */
-.hero-photo { display: flex; justify-content: center; }
-.avatar {
-  width: min(440px, 85vw);
-  aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 4px solid rgba(139, 92, 246, 0.45);
-  box-shadow: 0 0 60px rgba(99, 102, 241, 0.35);
-  background: var(--bg-soft);
-}
-.avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 15%;
-  transform: scale(1.25);
-  transform-origin: 50% 25%;
+.hero-photo { flex-shrink: 0; }
+.hero-photo img, .avatar-fallback {
+  width: 160px; height: 160px; border-radius: 50%; object-fit: cover; border: 4px solid var(--border);
+  background: #fff;
 }
 .avatar-fallback {
-  width: 100%; height: 100%;
-  display: grid; place-items: center;
-  font-size: 4rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--accent-soft); color: var(--accent);
+  font-size: 2.5rem; font-weight: bold;
 }
 
 /* Skills (Kỹ năng dạng thanh tiến trình) */
