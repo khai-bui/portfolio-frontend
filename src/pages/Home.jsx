@@ -87,12 +87,18 @@ export default function Home() {
         </div>
 
         <div className="hero-photo">
+        <div className="avatar">
           {avatarOk ? (
-            <img src="/avatar.jpg" alt={profile.name || "Avatar"} onError={() => setAvatarOk(false)} />
+            <img
+              src="/avatar.jpg"
+              alt={profile.name || "Avatar"}
+              onError={() => setAvatarOk(false)}
+            />
           ) : (
             <div className="avatar-fallback">{initials}</div>
           )}
         </div>
+      </div>
       </section>
 
       {/* SKILLS */}
